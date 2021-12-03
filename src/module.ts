@@ -413,7 +413,7 @@ class AjaxCtrl extends MetricsPanelCtrl {
         txt =
           '<iframe \
           frameborder="0" \
-          width="100%"  \
+          width="93%"  \
           height="100%" \
           ng-src="{{ url }}" \
           ng-if="ctrl.panel.method === \'iframe\'"></iframe>';
@@ -451,6 +451,7 @@ class AjaxCtrl extends MetricsPanelCtrl {
     if (txt) {
       this.ngtemplate.html(txt);
       this.ngtemplate.css('display', 'block');
+      this.ngtemplate.css('text-align', 'center');
       this.$compile(this.ngtemplate.contents())(this.$scope);
     } else {
       this.ngtemplate.css('display', 'none');
